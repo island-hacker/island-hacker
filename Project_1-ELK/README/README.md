@@ -2,7 +2,8 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+### Project 1 - NETWORK DIAGRAM
+(Images/Elk_Network_Diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `YML` file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -162,7 +163,7 @@ A summary of the access policies in place can be found in the table below.
       
     The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/docker_ps_output.png.bmp
 
 ___
 
@@ -207,10 +208,13 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
     Run the playbook, and navigate to
     `http://[your.ELK-VM.External.IP]:5601/app/kibana` using any browser to check that the installation worked as expected.
+    https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/Completion.jpg.bmp
 
     You can also verify that `sebp/elk:761` container is running by using ssh command to ELK VM and running command `docker ps`.
-      
+
+    Photo attached as reference. [https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/docker_ps_output.png.bmp]
     
+
 
 ### - Which file is the playbook? Where do you copy it?_
 
@@ -247,6 +251,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
                
 
         The URL to navigate to in order to check that the ELK server is running is `http://[your.ELK-VM.External.IP]:5601/app/kibana`.
+        https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/Completion.jpg.bmp
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
