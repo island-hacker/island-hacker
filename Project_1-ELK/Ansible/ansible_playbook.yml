@@ -1,0 +1,36 @@
+---
+  - name: My first playbook
+    hosts: webservers
+    become: true
+    tasks:
+
+      - name: Install docker.io
+        apt:
+          name: docker.io
+          state: present
+          update_cache: yes
+
+      - name: Install python3-pip
+        apt:
+          name: python3-pip
+          state: present
+
+      - name: Install docker
+        pip:
+          name: docker
+          state: present
+
+      - name: Install cyberxsecurity/dvwa
+        community.docker.docker_container:
+          name: dvwa_container
+          image: cyberxsecurity/dvwa
+          state: started
+          restart_policy: always
+          ports:
+            # Publish contaciner port 80 as hots port 80
+            - "80:80"
+
+      - name: Make sure docker service is started
+        systemd:
+          enabled: yes
+          name: docker
