@@ -1,14 +1,14 @@
-## Automated ELK Stack Deployment
+## Project 1 - Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-### Project 1 - NETWORK DIAGRAM
+### NETWORK DIAGRAM
 
-https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/Elk_Network_Diagram.jpg
+https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/Elk_Network_Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `YML` file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+
   ### - install-elk.yml
   ### - filebeat-config.yml
   ### - metricbeat-playbook.yml
@@ -55,15 +55,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
     Metric beat will send computer usage (eg. memory usage, cpu usage) to elk. Elk contains the elastic search which works as search engine, logstash collects logs and kibana helps with the output and presentation of data.
 
 
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+The configuration details of each machine found below.
 
 | Name        |     Function     | IP Address | Operating System |
 |-------------|------------------|------------|------------------|
 | Jump Box    |      Gateway     | 10.0.0.4   | Linux (Ubuntu)   |
 | Webserver 1 |      Server      | 10.0.0.5   | Linux (Ubuntu)   |
 | Webserver 2 |      Server      | 10.0.0.7   | Linux (Ubuntu)   |
-| Webserver 3 |      Server      | 10.0.0.09  | Linux (Ubuntu)   |
 | ELK Server  | Monitoring Server| 10.1.0.4   |Linux (Ubuntu)    |
 
 ___
@@ -87,20 +85,20 @@ Machines within the network can only be accessed by `Jumpbox`.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box |Yes             | my home public ip    |
-| web1  |no       |  10.0.0.5            |
-| web2  | no     |        10.0.0.7       |
-| web3  |  no     |        10.0.0.9       |
-| elk   |             no   | Personal             |
+| Name      | Publicly Accessible | Allowed IP Addresses |
+|-----------|---------------------|----------------------|
+| Jump Box  |       Yes           |   Host's Public IP   |
+| Web1      |       No            |        10.0.0.5      |
+| Web2      |       No            |        10.0.0.7      |
+| Elk       |       No            |        Personal      |
+#
 ## Elk Configuration
 
     
     Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 ### - What is the main advantage of automating configuration with Ansible?_
 
-    it does not require any person(s) to execute each installation and configuration steps as the person(s) would be waiting for some time depending on the installation therefore the person(s) would save time and use time for other task(s). Since the process can be repetative therefore human error(s) and speed can be overcome with automation. Ansible container can be used to run multiple installation on multiple servers from one remote location.
+    It does not require any person(s) to execute each installation and configuration steps as the person(s) would be waiting for some time depending on the installation therefore the person(s) would save time and use time for other task(s). Since the process can be repetative therefore human error(s) and speed can be overcome with automation. Ansible container can be used to run multiple installation on multiple servers from one remote location.
 
 
 ### - The playbook implements the following tasks:
@@ -164,7 +162,7 @@ A summary of the access policies in place can be found in the table below.
       
     The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/docker_ps_output.png.bmp
+https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/docker_ps_output.png
 
 ___
 
@@ -176,8 +174,7 @@ ___
           
     - Web 1 (10.0.0.5)
     - Web 2 (10.0.0.7)
-    - Web 1 (10.0.0.9)
-
+    
 ### - We have installed the following Beats on these machines:
     
     - Filebeat
@@ -209,12 +206,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
     Run the playbook, and navigate to
     `http://[your.ELK-VM.External.IP]:5601/app/kibana` using any browser to check that the installation worked as expected.
-    https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/Completion.jpg.bmp
+
+    Following webpage will load if successful.
+    https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/Completion.png
 
     You can also verify that `sebp/elk:761` container is running by using ssh command to ELK VM and running command `docker ps`.
 
-    Photo attached as reference. [https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/README/Images/docker_ps_output.png.bmp]
-    
+    Photo attached as reference. 
+    https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/docker_ps_output.png
 
 
 ### - Which file is the playbook? Where do you copy it?_
