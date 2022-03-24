@@ -10,8 +10,11 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 
   ### - install-elk.yml
+  https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Ansible/install-elk.yml
   ### - filebeat-config.yml
+  https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Ansible/filebeat-config.yml
   ### - metricbeat-playbook.yml
+  https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Ansible/metricbeat-playbook.yml
 
 
 ---
@@ -162,7 +165,7 @@ A summary of the access policies in place can be found in the table below.
       
     The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/docker_ps_output.png
+    https://github.com/island-hacker/island-hacker/blob/main/Project_1-ELK/Diagrams/docker_ps_output.png
 
 ___
 
@@ -228,7 +231,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
         [webservers]
         `10.0.0.5 ansible_python_interpreter=/usr/bin/python3`
         `10.0.0.7 ansible_python_interpreter=/usr/bin/python3`
-        `10.0.0.9 ansible_python_interpreter=/usr/bin/python3`
+
       
        [elk]
        `10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
@@ -244,8 +247,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
         [webservers]
         `10.0.0.5 ansible_python_interpreter=/usr/bin/python3`
         `10.0.0.7 ansible_python_interpreter=/usr/bin/python3`
-        `10.0.0.9 ansible_python_interpreter=/usr/bin/python3`
-      
+              
        [elk]
        `10.1.0.4 ansible_python_interpreter=/usr/bin/python3`
                
@@ -304,7 +306,7 @@ etc._
 
 
          ---
-    - name: Creat a play to install Metricbeat
+    - name: Create a play to install Metricbeat
       hosts: webservers
       become: true
       tasks:
