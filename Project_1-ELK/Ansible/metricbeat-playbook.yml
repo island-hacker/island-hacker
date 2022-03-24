@@ -1,5 +1,5 @@
 ---
-  - name: Creat a play to install Metricbeat
+  - name: Create a play to install Metricbeat
     hosts: webservers
     become: true
     tasks:
